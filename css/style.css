@@ -29,13 +29,6 @@ h3 {
     color: greenyellow;
     font-weight: bold;
     padding-left: 10px;
-    padding: 1em;
-    margin: 3em;
-}
-
-ol li{
-    list-style-type: disc;
-    list-style-position: inside;
 }
 
 #experience {
@@ -50,4 +43,21 @@ ol li{
     color: greenyellow;
     font-weight: bold;
     padding-left: 10px;
+}
+
+#topten {
+    background-color: greenyellow;
+    color: navy;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+ol li{
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+ul li{
+    list-style-type: disc;
+    list-style-position: inside;
 }

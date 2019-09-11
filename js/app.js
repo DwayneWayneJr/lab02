@@ -42,3 +42,8 @@ if (hunt === 'yes'){
 } else{
   alert('Please try again.');
 }
+
+var ansKey = confirm('Click okay to see the answers?');
+if (ansKey === true){
+    alert('The answers are, I am not from Washington, I do have a kid, I do not have pets, I do play an instrument, and I do hunt.')
+}
