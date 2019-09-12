@@ -90,13 +90,16 @@ for (var i = 0; i < 4; i++) {
     if (highNumber > favNumber) {
       alert('You are too high');
       break;
+
     } else if (highNumber < favNumber) {
       alert('You are too low');
       break;
+
     } else if (highNumber === favNumber) {
       alert('You are correct');
       points++;
       break;
+
     } else {
       alert('Not a valid input');
       break;
@@ -104,5 +107,24 @@ for (var i = 0; i < 4; i++) {
   }
 }
 alert('The correct answer is ' + favNumber);
+
+// //QUESTION #7
+// var guess = 0;
+// var stateAns = ['Texas','Oklahoma'];
+// while (guess <= 5 && !isCorrect) {
+//   var stateGuess = prompt('Can you guess one of the four states I have lived in')
+//   stateGuess = stateGuess.toLowerCase();
+// }
+// for ( var i = 0; i < 5; i++) {
+//   console.log('guess: ' + guess);
+//   if (stateGuess === stateAns[i]) {
+//     alert('You are correct');
+//     points++;
+//     break;
+
+//   } else{
+//     alert('')
+//   }
+// } 
 
 alert('You answered ' + points + ' questions correctly');
