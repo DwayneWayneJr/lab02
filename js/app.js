@@ -76,4 +76,33 @@ if (huntDeer === 'yes' || huntDeer === 'y'){
   alert('That answer is not acceptable');
 }
 
+//QUESTION #6
+var highNumber = 5;
+var favNumber = 3;
+
+for (var i = 0; i < 4; i++) {
+  console.log('highNumber: ' + highNumber);
+  while (highNumber !== favNumber) {
+    highNumber = prompt('My Favorite number is less than 6, can you guess in 4 tries?');
+
+    highNumber = parseInt(highNumber);
+
+    if (highNumber > favNumber) {
+      alert('You are too high');
+      break;
+    } else if (highNumber < favNumber) {
+      alert('You are too low');
+      break;
+    } else if (highNumber === favNumber) {
+      alert('You are correct');
+      points++;
+      break;
+    } else {
+      alert('Not a valid input');
+      break;
+    }
+  }
+}
+alert('The correct answer is ' + favNumber);
+
 alert('You answered ' + points + ' questions correctly');
