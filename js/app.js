@@ -1,49 +1,79 @@
-//prompt asks for name and says hello to the user
+//variable for the point system
+var points = 0;
+
+//variable asking the users name and returns a greeting
 var userName = prompt('What\'s your name? ');{
-  alert('Check me out ' + userName + '!!!');
+  alert('Check me out ' + userName + '!');
 }
 
-var whereFrom = prompt('Am I from Washington? ').toLowerCase();
+//QUESTION #1
+var fromWA = prompt('Am I from Washington? ');
+fromWA = fromWA.toLowerCase();
 
-if (whereFrom === 'no'){
-  console.log('This answer is a no.'); alert('BINGO ' + name + '.');
-} else{
-  alert('That\'s a no-go at this station');
+if (fromWA === 'no' || fromWA === 'n'){
+  console.log('This answer should be no or n.');
+  alert('That answer is correct ' + userName + '.');
+  points++;
+} else if (fromWA === 'yes' || fromWA === 'y'){
+  alert('That is incorrect.');
+}else{
+  alert('That answer is not acceptable');
 }
 
-var kids = prompt('Do I have kids? ').toLowerCase();
+//QUESTION #2
+var gotKid = prompt('Do I have kids? ');
+gotKid = gotKid.toLowerCase();
 
-if (kids === 'yes'){
-  console.log('This answer is a yes.'); alert('Cha Chiiiiing' + '!!!');
-} else{
-  alert('Not quite the response I was hoping for.');
+if (gotKid === 'yes' || gotKid === 'y'){
+  console.log('This answer should be yes or y.');
+  alert('That answer is correct ' + userName + '.');
+  points++;
+} else if (gotKid === 'no' || gotKid === 'n'){
+  alert('That is incorrect.');
+}else{
+  alert('That answer is not acceptable');
 }
 
-var pets = prompt('Do I have pets? ').toLowerCase();
+//QUESTION #3
+var gotPets = prompt('Do I have pets? ');
+gotPets = gotPets.toLowerCase();
 
-if (pets === 'no'){
-  console.log('This answer is a no.'); alert('Studied hard you have' + '.');
-} else{
-  alert('Again you must try my young Padawan.');
+if (gotPets === 'no' || gotPets === 'n'){
+  console.log('This answer should be no or n.');
+  alert('That answer is correct ' + userName + '.');
+  points++;
+} else if (gotPets === 'yes' || gotPets === 'y'){
+  alert('That is incorrect.');
+}else{
+  alert('That answer is not acceptable');
 }
 
-var instrument = prompt('Do I play an instrument? ').toLowerCase();
+//QUESTION #4
+var playInstrument = prompt('Do I play an instrument? ');
+playInstrument = playInstrument.toLowerCase();
 
-if (instrument === 'yes'){
-  console.log('This answer is a yes.'); alert('I\'d call that a touchdown friend.');
-} else{
-  alert('No, just no.');
+if (playInstrument === 'yes' || playInstrument === 'y'){
+  console.log('This answer should be yes or y.');
+  alert('That answer is correct ' + userName + '.');
+  points++;
+} else if (playInstrument === 'no' || playInstrument === 'n'){
+  alert('That is incorrect.');
+}else{
+  alert('That answer is not acceptable');
 }
 
-var hunt = prompt('Do I hunt? ').toLowerCase();
+//QUESTION #5
+var huntDeer = prompt('Do I hunt? ');
+huntDeer = huntDeer.toLowerCase();
 
-if (hunt === 'yes'){
-  console.log('This answer is a yes.'); alert('I knew you knew ' + name + '.');
-} else{
-  alert('Please try again.');
+if (huntDeer === 'yes' || huntDeer === 'y'){
+  console.log('This answer should be yes or y.');
+  alert('That answer is correct ' + userName + '.');
+  points++;
+} else if (huntDeer === 'no' || huntDeer === 'n'){
+  alert('That is incorrect.');
+}else{
+  alert('That answer is not acceptable');
 }
 
-var ansKey = confirm('Click okay to see the answers?');
-if (ansKey === true){
-    alert('The answers are, I am not from Washington, I do have a kid, I do not have pets, I do play an instrument, and I do hunt.')
-}
+alert('You answered ' + points + ' questions correctly');
