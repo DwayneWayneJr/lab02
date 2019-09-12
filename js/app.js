@@ -1,95 +1,102 @@
 //variable for the point system
 var points = 0;
+var name;
 
 // variable asking the users name and returns a greeting
 function firstName() {
-  var userName = prompt('What\'s your name? ');
-  alert('Check me out ' + userName + '!');
-  return userName;
+  name = prompt('What\'s your name? ');
+  alert('Check me out ' + name + '!');
+  //Call next function here in each preceeding code block to trigger the next function and tally up the correct answers
+  wash();
 }
 
 // //QUESTION #1
-function wash(userName) {
+function wash() {
   var fromWA = prompt('Am I from Washington? ');
   fromWA = fromWA.toLowerCase();
 
   if (fromWA === 'no' || fromWA === 'n') {
-    console.log('This answer should be no or n.');
-    alert('That answer is correct ' + userName + '.');
+    console.log('This answer should be no or n.');firstName();
+    alert('That answer is correct ' + name + '.');
     points++;
   } else if (fromWA === 'yes' || fromWA === 'y') {
     alert('That is incorrect.');
   } else {
     alert('That answer is not acceptable');
   }
+  kid();
 }
 
 // //QUESTION #2
-function kid(userName) {
+function kid() {
   var gotKid = prompt('Do I have kids? ');
   gotKid = gotKid.toLowerCase();
 
   if (gotKid === 'yes' || gotKid === 'y') {
     console.log('This answer should be yes or y.');
-    alert('That answer is correct ' + userName + '.');
+    alert('That answer is correct ' + name + '.');
     points++;
   } else if (gotKid === 'no' || gotKid === 'n') {
     alert('That is incorrect.');
   } else {
     alert('That answer is not acceptable');
   }
+  pets();
 }
 
 // // //QUESTION #3
-function pets(userName) {
+function pets() {
   var gotPets = prompt('Do I have pets? ');
   gotPets = gotPets.toLowerCase();
 
   if (gotPets === 'no' || gotPets === 'n') {
     console.log('This answer should be no or n.');
-    alert('That answer is correct ' + userName + '.');
+    alert('That answer is correct ' + name + '.');
     points++;
   } else if (gotPets === 'yes' || gotPets === 'y') {
     alert('That is incorrect.');
   } else {
     alert('That answer is not acceptable');
   }
+  instrument();
 }
 
 // //QUESTION #4
-function instrument(userName) {
+function instrument() {
   var playInstrument = prompt('Do I play an instrument? ');
   playInstrument = playInstrument.toLowerCase();
 
   if (playInstrument === 'yes' || playInstrument === 'y') {
     console.log('This answer should be yes or y.');
-    alert('That answer is correct ' + userName + '.');
+    alert('That answer is correct ' + name + '.');
     points++;
   } else if (playInstrument === 'no' || playInstrument === 'n') {
     alert('That is incorrect.');
   } else {
     alert('That answer is not acceptable');
   }
+  deer();
 }
 
 // //QUESTION #5
-function deer(userName) {
+function deer() {
   var huntDeer = prompt('Do I hunt? ');
   huntDeer = huntDeer.toLowerCase();
 
   if (huntDeer === 'yes' || huntDeer === 'y') {
     console.log('This answer should be yes or y.');
-    alert('That answer is correct ' + userName + '.');
+    alert('That answer is correct ' + name + '.');
     points++;
   } else if (huntDeer === 'no' || huntDeer === 'n') {
     alert('That is incorrect.');
   } else {
     alert('That answer is not acceptable');
   }
+  number();
 }
 
 // //QUESTION #6
-function number(userName) {
+function number() {
   var highNumber = 5;
   var favNumber = 3;
 
@@ -140,12 +147,9 @@ function number(userName) {
 //   }
 // }
 
+//Call first function here
+firstName();
+
 alert('You answered ' + points + ' questions correctly');
 
-var name = firstName();
-wash(name);
-kid(name);
-pets(name);
-instrument(name);
-deer(name);
-number(name);
+
