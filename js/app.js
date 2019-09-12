@@ -138,7 +138,7 @@ function number(userName) {
 //   } else{
 //     alert('')
 //   }
-// } 
+// }
 
 alert('You answered ' + points + ' questions correctly');
 
