@@ -14,9 +14,9 @@ function firstName() {
 function wash() {
   var fromWA = prompt('Am I from Washington? ');
   fromWA = fromWA.toLowerCase();
-
+  console.log(fromWA);
   if (fromWA === 'no' || fromWA === 'n') {
-    console.log('This answer should be no or n.');firstName();
+    console.log('This answer should be no or n.' + name);
     alert('That answer is correct ' + name + '.');
     points++;
   } else if (fromWA === 'yes' || fromWA === 'y') {
