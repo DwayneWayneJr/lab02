@@ -1,68 +1,55 @@
 body {
-    background-color: grey;
-    font-family: 'Courier New', Courier, monospace
+    background-color: #20b7e8;
 }
 
 h1 {
-    color: navy;
-    font-size: 60px;
+    color:gray;
+    font-size: 36pt;
     text-align: center;
-    padding: 30px;
-    font-weight: bold;
 }
 
 h3 {
-    font-size: 40px;
-    font-weight: bold;
-    padding: 20px;
+    font-size: 28pt;
+    padding-top: 10px;
 }
 
 #bio {
-    background-color: greenyellow;
-    color: navy;
-    font-weight: bold;
+    background-color: gray;
+    color: whitesmoke;
     padding-left: 10px;
+    font-size: 14pt;
 }
 
 #education {
-    background-color: navy;
-    color: greenyellow;
-    font-weight: bold;
+    background-color: gray;
+    color: whitesmoke;
     padding-left: 10px;
+    font-size: 14pt;
 }
 
 #experience {
-    background-color: greenyellow;
-    color: navy;
-    font-weight: bold;
-    padding-left: 10px;
+    background-color:gray;
+    color: whitesmoke;
+    padding-left: 10px;  
+    font-size: 14pt;
 }
 
 #goals {
-    background-color: navy;
-    color: greenyellow;
-    font-weight: bold;
+    background-color: gray;
+    color: whitesmoke;
+    font-size: 14pt;
     padding-left: 10px;
 }
 
 #topten {
-    background-color: greenyellow;
-    color: navy;
-    font-weight: bold;
+    background-color:gray;
+    color: whitesmoke;
+    font-size: 14pt;
     padding-left: 10px;
 }
 
-ol li{
-    list-style-type: disc;
-    list-style-position: inside;
-}
-
-ul li{
-    list-style-type: disc;
-    list-style-position: inside;
-}
-
-footer{
-    height: 100px;
-    background-color: limegreen;
+.sMedia {
+    display: inline;
+    list-style-type: none;
+    text-align: center;
 }

@@ -7,7 +7,7 @@ function firstName() {
   name = prompt('What\'s your name? ');
   alert('Check me out ' + name + '!');
   //Call next function here in each preceeding code block to trigger the next function and tally up the correct answers
-  wash();
+  // wash();
 }
 
 // //QUESTION #1
@@ -24,7 +24,7 @@ function wash() {
   } else {
     alert('That answer is not acceptable');
   }
-  kid();
+  // kid();
 }
 
 // //QUESTION #2
@@ -41,7 +41,7 @@ function kid() {
   } else {
     alert('That answer is not acceptable');
   }
-  pets();
+  // pets();
 }
 
 // // //QUESTION #3
@@ -58,7 +58,7 @@ function pets() {
   } else {
     alert('That answer is not acceptable');
   }
-  instrument();
+  // instrument();
 }
 
 // //QUESTION #4
@@ -75,7 +75,7 @@ function instrument() {
   } else {
     alert('That answer is not acceptable');
   }
-  deer();
+  // deer();
 }
 
 // //QUESTION #5
@@ -92,7 +92,7 @@ function deer() {
   } else {
     alert('That answer is not acceptable');
   }
-  number();
+  // number();
 }
 
 // //QUESTION #6
@@ -128,28 +128,50 @@ function number() {
   }
   alert('The correct answer is ' + favNumber);
 }
-// //QUESTION #7
-// var guess = 0;
-// var stateAns = ['Texas','Oklahoma'];
-// while (guess <= 5 && !isCorrect) {
-//   var stateGuess = prompt('Can you guess one of the four states I have lived in')
-//   stateGuess = stateGuess.toLowerCase();
-// }
-// for ( var i = 0; i < 5; i++) {
-//   console.log('guess: ' + guess);
-//   if (stateGuess === stateAns[i]) {
-//     alert('You are correct');
-//     points++;
-//     break;
+//QUESTION #7
+function statesLived() {
 
-//   } else{
-//     alert('')
-//   }
-// }
+  var guess = 0;
+  var stateAns = ['texas', 'oklahoma'];
+  function guesses(arr) {
+    var message = ' ';
+    for (var i = 0; i < arr.length; i++) {
+      message = message.concat(`${arr[i]}, `);
+    }
+    console.log('message' + message);
+    return message;
+  }
+  var isCorrect = false;
+  while (guess < 6 && !isCorrect) {
+    var stateGuess = prompt('Can you guess one of the four states I have lived in');
+    stateGuess = stateGuess.toLowerCase();
+    for (var i = 0; i < stateAns.length; i++) {
+      console.log('stateGuess' + stateGuess);
+      console.log('guess: ' + guess);
+      if (stateGuess === stateAns[i]) {
+        alert('You are correct');
+        points++;
+        isCorrect = true;
+      }
+    }
+    if (isCorrect === false) {
 
-//Call first function here
+      alert('You are incorrect');
+      guess++;
+    }
+    if (guess === 6) {
+      alert(`You have run out of guesses, the correct answers are ${guesses(stateAns)}.`);
+    }
+  }
+}
+
 firstName();
+wash();
+kid();
+pets();
+instrument();
+deer();
+number();
+statesLived();
 
 alert('You answered ' + points + ' questions correctly');
-
-
